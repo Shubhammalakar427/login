@@ -1,0 +1,98 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+.demo{
+    width: 100%;
+    height: 100vh;
+    background-image:url(icon/d3.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.text{
+    color: white;
+    width: 400px;
+    height: 450px;
+    margin: 10px;
+    padding: 50px;
+    background: transparent;
+    border: 2px solid black;
+    border-radius: 2px 20px 2px 20px ;
+    backdrop-filter: 100px blur;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 30px ;
+    border-color: brown blue greenyellow tomato;
+    box-shadow: 18px 18px 15px rgb(220, 116, 116)
+    
+    
+}
+.text label{
+    font-size: 20px;
+    padding: 12px;
+}
+.text input{
+    
+    font-size: 20px;
+    width: 300px;
+    margin: 20px;
+    bottom: 30px;
+    padding: 12px;
+    color: wheat;
+    background-color: transparent;
+}
+.text input::placeholder{
+    color:white ;
+} 
+button{
+    font-size: 20px;
+    width: 300px;
+    margin: 20px;
+    bottom: 30px;
+    padding: 12px;
+    color: white;
+    background-color: transparent;
+    border-radius: 20px;
+}
+button:hover{
+    background-color:brown;
+    color: white;
+    cursor: pointer;
+}
+@media screen and (max-width:768px){
+    .demo{
+        width: 100%;
+        height: 100vh;
+    }
+    .text{
+        width: 300px;
+        height: 350px; 
+    }
+    .text input{
+        font-size: 10px;
+        width: 200px;
+        margin: 10px;
+        bottom: 20px;
+        padding: 8px;
+        
+    }
+    button{
+        font-size: 20px;
+        width: 200px;
+        margin: 10px;
+        bottom: 20px;
+        padding: 8px;
+        color: white;
+        background-color: transparent;
+        border-radius: 20px;
+    }
+
+}

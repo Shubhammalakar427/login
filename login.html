@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>login</title>
+      <link rel="stylesheet"href="login.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+
+    </head>
+    <body>
+      <div class="demo">
+        
+        <div class="text">
+            <form action="#" name="submit-to-google-sheet" method="post" >
+              <label>Name</label>
+              <input type="text" id="name" name="Name" placeholder="Your name.." required><br>
+          
+              <label>Email</label>
+              <input type="text" id="email" name="Email" placeholder="Your email.." required><br>
+              
+              <label>Password</label>
+              <input type="password" id="password" name="Password" placeholder="password.." required><br>
+              <button type="submit" value="Login" name="submit" id="log">Login</button>
+            </form>
+          </div>
+        </div>
+
+          <script>
+           
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxub8wUIugTF1NpAHeMnJuximKMaqfOHVTrjbAh2pB22I4s0BuOKS18OuVnE6xhb4tx/exec'
+            const form = document.forms['submit-to-google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
+                alert('Successfully Logged in ');
+                window.location.replace('https://shubhammalakar427.github.io/foodwebsite/');
+            })
+
+           
+          </script>
+
+    </body>
+</html>
